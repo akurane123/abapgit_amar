@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Decomission HU</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/SCWM/LRF_SSCRI01</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_SSCRI02</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_SSCRO01</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_SSCRO02</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_SSCRO03</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_DECOMM_HU_LABELF01</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_DECOMM_HU_LABELTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZRF_DECOMM_HU_LABEL</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFM_RFC_DECOMM_HU_PAI</FUNCNAME>
+     <SHORT_TEXT>Decommission HU</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <TYP>/SCWM/S_RF_REHU_HU</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Screen Structure for Receiving of Handling Units</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFM_RFC_DECOMM_HU_PBO</FUNCNAME>
+     <SHORT_TEXT>Decommission HU</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <TYP>/SCWM/S_RF_REHU_HU</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Screen Structure for Receiving of Handling Units</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>SAPLZRF_DECOMM_HU_LABEL</PROGRAM>
+      <SCREEN>2000</SCREEN>
+      <LANGUAGE>E</LANGUAGE>
+      <DESCRIPT>Screen for HU Decomission</DESCRIPT>
+      <TYPE>I</TYPE>
+      <NEXTSCREEN>2000</NEXTSCREEN>
+      <LINES>027</LINES>
+      <COLUMNS>120</COLUMNS>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>/SCWM/S_RF_REHU_HU-HUIDENT</NAME>
+       <TEXT>HU_</TEXT>
+       <LINE>002</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>003</LENGTH>
+       <VISLENGTH>003</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>F</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <LABELLEFT>X</LABELLEFT>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/SCWM/S_RF_REHU_HU-HUIDENT</NAME>
+       <TEXT>____________________</TEXT>
+       <LINE>002</LINE>
+       <COLUMN>006</COLUMN>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <CONV_EXIT>HUID</CONV_EXIT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+     <FLOW_LOGIC>
+      <RPY_DYFLOW>
+       <LINE>PROCESS BEFORE OUTPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>MODULE status_sscr.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW/>
+      <RPY_DYFLOW>
+       <LINE>PROCESS AFTER INPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>MODULE user_command_sscr.</LINE>
+      </RPY_DYFLOW>
+     </FLOW_LOGIC>
+     <SPACES>
+      <item>0</item>
+      <item>2</item>
+      <item>0</item>
+      <item>0</item>
+      <item>2</item>
+     </SPACES>
+    </item>
+   </DYNPROS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

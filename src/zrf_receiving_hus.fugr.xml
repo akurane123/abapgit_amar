@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function Group for HU receiving</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/SCWM/LRF_RECEIVING_HUSF03</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_RECEIVING_HUSF07</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_RECEIVING_HUSF14</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_RECEIVING_HUSF15</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_RECEIVING_HUSF24</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_RECEIVING_HUSF25</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_RECEIVING_HUSF34</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_RECEIVING_HUSF01</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_RECEIVING_HUSTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZRF_RECEIVING_HUS</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZRF_REHU_CFWT_PAI</FUNCNAME>
+     <SHORT_TEXT>Confirm HU WT</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_REHU_HU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CT_REHU_HU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TT_RF_REHU_HU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_REHU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_ADMIN_REHU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_REHU_PROD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_REHU_PROD</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CT_REHU_PROD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TT_RF_REHU_PROD</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Screen Structure for Receiving of Handling Units</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_REHU_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Receiving of HUs HU table</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_REHU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Administrative Structure, to Avoid Global Variables</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_REHU_PROD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Structure for RF Screens for Putaway Process</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_REHU_PROD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>RF receiving of HUs Prod. table</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZRF_REHU_HU_SEL_PAI</FUNCNAME>
+     <SHORT_TEXT>HU selection for screen 301</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_REHU_HU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CT_REHU_HU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TT_RF_REHU_HU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_REHU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_ADMIN_REHU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_REHU_PROD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_REHU_PROD</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CT_REHU_PROD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TT_RF_REHU_PROD</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_REHU_DLV</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_UNLO_DOCID</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Screen Structure for Receiving of Handling Units</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_REHU_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Receiving of HUs HU table</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_REHU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Administrative Structure, to Avoid Global Variables</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_REHU_PROD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Structure for RF Screens for Putaway Process</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_REHU_PROD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>RF receiving of HUs Prod. table</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_REHU_DLV</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Screen Structure for Receiving of Handling Units</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

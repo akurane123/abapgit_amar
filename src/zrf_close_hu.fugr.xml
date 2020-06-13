@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Outbound - Close HU</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/SCWM/LRF_PACKINGF01</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_PACKINGF02</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_PACKINGF06</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_CLOSE_HUF01</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_CLOSE_HUTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZRF_CLOSE_HU</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZRF_PACK_HU_CLOSE_PAI</FUNCNAME>
+     <SHORT_TEXT>Complete Putaway HU</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_PACK</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_PACK</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_WRKC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TWORKST</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_PACK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur für RF-Dynpros beim Verteilungsprozess</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_WRKC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Arbeitsplatzprofil</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

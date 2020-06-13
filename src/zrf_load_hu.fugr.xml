@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function Group for HU loading</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/SCWM/LRF_SSCRI01</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_SSCRI02</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_SSCRO01</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_SSCRO02</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_SSCRO03</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_LOAD_HUF01</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_LOAD_HUTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZRF_LOAD_HU</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFM_RFC_LOAD_HU</FUNCNAME>
+     <SHORT_TEXT>Post event Load in ATTP for HU</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_REHU_HU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_REHU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_ADMIN_REHU</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_REHU_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Screen Structure for Receiving of Handling Units</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_REHU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Administrative Structure, to Avoid Global Variables</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZRF_SH_DL_HU_SEL_PAI</FUNCNAME>
+     <SHORT_TEXT>Load HU</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_LOAD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_LOAD</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_ADMIN_LOAD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_ADMIN_LOAD</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CT_LOAD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TT_RF_LOAD</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>WME_VERIF</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_WME_VERIF</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_LOAD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Screen Structure for Loading Process</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_ADMIN_LOAD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Administrative Structure, to Avoid Global Variables</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_LOAD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table Type for RF Screens During Load Process</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WME_VERIF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Key Fields for Determining the Verification Profile in WME</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Outbound - Pack HU</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/SCWM/LRF_PACKINGF02</SOBJ_NAME>
+    <SOBJ_NAME>/SCWM/LRF_PACKINGF06</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_PACK_HUF01</SOBJ_NAME>
+    <SOBJ_NAME>LZRF_PACK_HUTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZRF_PACK_HU</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZRF_PACK_CREA_TO_MN_PAI</FUNCNAME>
+     <SHORT_TEXT>PAI Repack Stock ID/HU (Manual)</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_PACK</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_PACK</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_WRKC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TWORKST</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_PACK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur für RF-Dynpros beim Verteilungsprozess</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_WRKC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Arbeitsplatzprofil</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZRF_PACK_HU_CREATE_PAI</FUNCNAME>
+     <SHORT_TEXT>Create Putaway HU</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_PACK</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_PACK</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CS_WRKC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TWORKST</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CS_PACK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur für RF-Dynpros beim Verteilungsprozess</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_WRKC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Arbeitsplatzprofil</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
